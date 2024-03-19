@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+.bg-blue {
+	background-color: #005AB7;
+  	overflow: hidden;
+	margin: 0px 0px 50px 0px;
+    height: 90px;
+    display: flex;
+  	justify-content: center;
+  	align-items: center;
+	
+  	box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+  	-moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+  	-webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+  	-o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+  	-ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.bg-white {
+	background-color: #fff;
+  	overflow: hidden;
+	margin: 0px 0px 15px 0px;
+    height: 70px;
+	
+  	box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-o-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-ms-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.bg-white-2 {
+	background-color: #fff;
+  	overflow: hidden;
+	margin: 0px 0px 15px 0px;
+	
+  	box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-o-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+  	-ms-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.bg-silver {
+	width:100%;
+	position: relative;
+	background: #f2f2f2;
+}
+
+.login-form {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+
+.login-form h2 {
+	text-align: center;
+	margin-bottom: 35px;
+	margin-top:-25px;
+	font-size: 30px;
+}
+
+.login-form .form-control {
+	border-radius: 20px;
+}
+
+.login-form .btn-primary {
+	border-radius: 20px;
+	width: 100%;
+}
+
+.login-form .form-group {
+	margin-bottom: 20px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ image ]*/
+
+img {
+	max-width: 250px;
+	max-height: 250px;
+}
+
+.img-index {
+	max-width: 125px;
+	max-height: 125px;
+}

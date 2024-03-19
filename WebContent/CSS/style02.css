@@ -1,0 +1,951 @@
+/*//////////////////////////////////////////////////////////////////
+[ header ]*/
+.container-headergear {
+  float: right;
+  position: relative;
+  font-size: 20px;
+  color: #85888e;
+}
+
+.container-headeruser {
+  float: right;
+  font-size: 20px;
+  color: #85888e;
+}
+
+.dropdown-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.dropdown-content.show {
+    height: 100%;
+}
+
+
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	font-size: 12px;
+	padding: 10px 0;
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-10px);
+	transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dropdown-menu.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.dropdown-menu li {
+	padding: 8px 20px;
+	list-style: none;
+	color: #333;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+	background-color: #e1e1e1;
+	color: #000;
+}
+
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-toggle::after {
+	content: "\25BC";
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: 4px;
+	vertical-align: middle;
+	transition: transform 0.3s;
+	font-size: 8px;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+	transform: rotateX(180deg);
+}
+
+.dropdown-menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.dropdown-menu ul li {
+	padding: 8px 16px;
+}
+
+.username {
+	font-size: 16px;
+}
+
+.useritem {
+	color: #85888e;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ index ]*/
+.container-index {
+	display: flex;
+}
+
+.columnleft-index {
+	background: #fff;
+	border-radius: 0px;
+}
+
+.columnleft-2 {
+	background: #fff;
+	border-radius: 0px;
+}
+
+.columnright-container {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.columnright-title {
+	width: calc(100% - 20px);
+	height: 95px;
+	background: #005AB7;
+	border-radius: 6px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+
+.circle-frame {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 0.3px solid #bbc0c3;
+	margin: 0 auto;
+  	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.circle-frame img {
+	max-width: 100%;
+	height: auto;
+}
+
+.columnright-part {
+	color: #01d475;
+	max-height: 100%;
+	width: calc(100% - 20px);
+	background: #ffffff;
+	border-radius: 6px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+.columnright-part-2 {
+	color: #01d475;
+	width: 280px;
+	height: 40px;
+	display: block;
+	background: #005AB7;
+	margin-bottom: 10px;
+}
+
+.checkbox {
+	display: none;
+}
+
+.checkbox-label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.checkbox-label::after {
+	content: "\2713"; /* Ký tự dấu tích Unicode */
+	font-size: 14px;
+	color: transparent; /* Mặc định ẩn dấu tích */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.checkbox:checked+.checkbox-label::after {
+	color: green; /* Thay đổi màu sắc dấu tích */
+}
+
+.checkboxedit {
+	display: none;
+}
+
+.checkboxedit-label {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.checkboxedit-label::after {
+	content: "\2713"; /* Ký tự dấu tích Unicode */
+	font-size: 14px;
+	color: transparent; /* Mặc định ẩn dấu tích */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.checkboxedit:checked+.checkboxedit-label::after {
+	color: green; /* Thay đổi màu sắc dấu tích */
+}
+
+
+
+.checkbox-1 {
+	display: none;
+}
+
+.checkbox-label-1 {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.checkbox-label-1::after {
+	content: "\2713"; /* Ký tự dấu tích Unicode */
+	font-size: 14px;
+	color: transparent; /* Mặc định ẩn dấu tích */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.checkbox-1:checked+.checkbox-label-1::after {
+	color: green; /* Thay đổi màu sắc dấu tích */
+}
+
+.checkbox-2 {
+	display: none;
+}
+
+.checkbox-label-2 {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	cursor: pointer;
+	position: relative;
+}
+
+.checkbox-label-2::after {
+	content: "\2713"; /* Ký tự dấu tích Unicode */
+	font-size: 14px;
+	color: transparent; /* Mặc định ẩn dấu tích */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.checkbox-2:checked+.checkbox-label-2::after {
+	color: green; /* Thay đổi màu sắc dấu tích */
+}
+
+.textbox {
+	height: 46px;
+	border: 1.5px solid #cfcfcf; /* Màu và độ dày của viền */
+	border-radius: 6px;
+	padding: 5px; /* Khoảng cách giữa viền và nội dung bên trong */
+	margin-bottom: 20px; /* Khoảng cách giữa các khung text box */
+	line-height: 2; /* Giá trị này có thể điều chỉnh để căn chỉnh văn bản */
+}
+
+.highlight {
+	color: #1ec079;
+}
+
+.styleinput {
+	width: 100%;
+	font-size: 16px;
+	background-color: #28d9fa;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 2px dashed #fff;
+}
+
+.sizetextbox-450 {
+	width:450px;
+}
+
+.sizetextbox-235 {
+	width:235px;
+}
+
+.sizetextbox-100 {
+	width:140px;
+}
+
+.sizetextbox-450 input {
+  width: calc(100% - 15px);
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ CSS cho cửa sổ modal ] */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 530px; 
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+	background-color: white;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ disable ]*/
+.disabled-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 60%;
+    cursor: not-allowed;
+    z-index: 1;
+}
+
+.disable[disabled] {
+    position: relative;
+    overflow: hidden;
+    cursor: not-allowed;
+}
+
+.disable[disabled]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Đảm bảo sự kiện chuột không bị chặn bởi pseudo-element */
+    display: none; /* Ban đầu ẩn hiệu ứng */
+}
+
+.disable[disabled]:hover::before {
+    display: block; /* Hiển thị hiệu ứng khi con trỏ di chuyển vào */
+}
+
+.checkbox[disabled] + .checkbox-label + .disabled-overlay {
+    display: block;
+}
+
+input[disabled] {
+    position: relative;
+    cursor: not-allowed;
+}
+
+input[disabled]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Đảm bảo sự kiện chuột không bị chặn bởi pseudo-element */
+    display: none; /* Ban đầu ẩn hiệu ứng */
+}
+
+input[disabled]:hover::before {
+    display: block; /* Hiển thị hiệu ứng khi con trỏ di chuyển vào */
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ view goal ]*/
+.framewhite {
+	width: calc(100% - 20px);
+	background: #ffffff;
+	border-radius: 6px;
+}
+
+.buttonblue {
+	width: 62px;
+	height: 38px;
+	background: #5cacf3;
+	color:#ffffff;
+	border-radius: 3px;
+	font-size: 15px;
+}
+
+.buttonblue:hover {
+	background: #4a94d2;
+}
+
+.file-upload-wrapper {
+	display: inline-block;
+	border: 4px dashed #5cacf3; /* Viền nét đứt dài ra 4px màu xanh */
+	border-radius: 5px;
+	padding: 4px; /* Khoảng cách giữa viền và nút */
+}
+
+.custom-file-upload {
+	font-size: 16px;
+	background-color: #5cacf3;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ list box ]*/
+.container-combobox {
+	display: flex;
+}
+
+.h4-title {
+	display: flex;
+}
+
+.combobox {
+	flex-grow: 1;
+	display: block;
+	position: relative;
+}
+
+.combobox select {
+	width: calc(100% - 30px);
+	height: 38px;
+	padding: 6px 10px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #ffffff;
+	color: #333333;
+	appearance: none;
+}
+
+
+.combobox select:focus {
+	outline: none;
+}
+
+.combobox2 {
+	flex-grow: 1;
+	position: relative;
+	display: inline-block;
+}
+
+.combobox2 select {
+	width: calc(100% - 30px);
+	height: 38px;
+	padding: 6px 10px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #ffffff;
+	color: #333333;
+	appearance: none;
+}
+
+.flex {
+	position: relative;
+	display: inline-block;
+}
+
+
+.combobox2 select:focus {
+	outline: none;
+}
+
+.table-container {
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+.data-table {
+	width: calc(100% - 15px);
+	border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+	padding: 8px;
+	border: 1px solid #d8d8d8;
+}
+
+.data-table th {
+	color: #85888e;
+}
+
+.data-table td {
+	color: #85888e;
+}
+
+.data-table tbody tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+
+.wrap-login101 {
+  width: 410px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px 10px 15px 10px;
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.wrap-login100 {
+	width: 390px;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 77px 55px 33px 55px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+}
+
+/*---------------------------------------------*/
+input {
+	outline: none;
+	border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+input::-webkit-input-placeholder { color: #adadad;}
+input:-moz-placeholder { color: #adadad;}
+input::-moz-placeholder { color: #adadad;}
+input:-ms-input-placeholder { color: #adadad;}
+
+textarea::-webkit-input-placeholder { color: #adadad;}
+textarea:-moz-placeholder { color: #adadad;}
+textarea::-moz-placeholder { color: #adadad;}
+textarea:-ms-input-placeholder { color: #adadad;}
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+.dec{
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+  	color: #6a7dfe;
+  	color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  	color: -o-linear-gradient(left, #21d4fd, #b721ff);
+  	color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  	color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.txt2 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+
+/*------------------------------------------------------------------
+[ Form ]*/
+
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-title {
+  display: block;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+}
+.login100-form-title i {
+  font-size: 60px;
+}
+
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+}
+
+.input100 {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px;
+}
+
+/*---------------------------------------------*/ 
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  background: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+.focus-input100::after {
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.2;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100::after {
+  top: -15px;
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 + .focus-input100::after {
+  top: -15px;
+}
+
+.has-val.input100 + .focus-input100::before {
+  width: 100%;
+}
+
+/*---------------------------------------------*/
+.btn-show-pass {
+  font-size: 15px;
+  color: #999999;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.btn-show-pass:hover {
+  color: #6a7dfe;
+  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  color: -o-linear-gradient(left, #21d4fd, #b721ff);
+  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+.btn-show-pass.active {
+  color: #6a7dfe;
+  color: -webkit-linear-gradient(left, #21d4fd, #b721ff);
+  color: -o-linear-gradient(left, #21d4fd, #b721ff);
+  color: -moz-linear-gradient(left, #21d4fd, #b721ff);
+  color: linear-gradient(left, #21d4fd, #b721ff);
+}
+
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 13px;
+}
+
+.wrap-login100-form-btn {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.login100-form-bgbtn {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #a64bf4;
+  background: -webkit-linear-gradient(right, #21d4fd, #005AB7, #21d4fd, #005AB7);
+  background: -o-linear-gradient(right, #21d4fd, #005AB7, #21d4fd, #005AB7);
+  background: -moz-linear-gradient(right, #21d4fd, #005AB7, #21d4fd, #005AB7);
+  background: linear-gradient(right, #21d4fd, #005AB7, #21d4fd, #005AB7);
+  top: 0;
+  left: -100%;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+}
+
+.wrap-login100-form-btn:hover .login100-form-bgbtn {
+  left: 0;
+}
+
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: #fff;
+  border: 1px solid #c80000;
+  border-radius: 2px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0px;
+  pointer-events: none;
+
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-size: 16px;
+  color: #c80000;
+
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 5px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.validate-input {
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
